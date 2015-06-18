@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load staticfiles %}
+
+{% block content %}
+
+<h1>Условия проекта:</h1>
+
+<h3>Необходимо сделать два селфи – до и после уборки.</h3>
+<p>Оба селфи должны быть:<br>1. Сделаны одним человеком<br>2. Одного и того же места<br>3. С одинакового ракурса</p>
+
+<h3>Как зарабатывать баллы?</h3>
+
+<p>Одна уборка = 10 баллов<br>Регистрация на сайте = 30 баллов<br>Приглашение друга = 5 баллов</p>
+
+<div class="panel panel-default panel-images panel-example">
+    <div class="panel-heading text-center">
+        <h3>Пример правильного селфи</h3>
+    </div>
+
+  <div class="panel-body">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h3>До уборки</h3>
+            <img src="http://placehold.it/400x400" class="img-rounded img-responsive">
+        </div>
+        <div class="col-md-6 text-center">
+            <h3>После уборки</h3>
+            <img src="http://placehold.it/400x400" class="img-rounded img-responsive">
+        </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
