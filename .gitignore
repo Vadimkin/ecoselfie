@@ -1,0 +1,10 @@
+venv/
+*.pyc
+ecoselfie/settings_secret.py
+*.json
+*~
+DEADJOE
+media/
+images/
+files/
+.idea/
