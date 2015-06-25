@@ -1,3 +1,4 @@
 from django.contrib import admin
+from selfie.models import Selfie
 
-# Register your models here.
+admin.site.register(Selfie)

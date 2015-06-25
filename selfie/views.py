@@ -1,4 +1,6 @@
+from django.utils.datastructures import MultiValueDictKeyError
 from django.views import generic
+from selfie.forms import SelfieForm
 
 
 class IndexView(generic.TemplateView):
@@ -15,3 +17,16 @@ class GiftsView(generic.TemplateView):
 
 class RulesView(generic.TemplateView):
     template_name = "selfie/rules.html"
+
+class SelfieCreateView(generic.CreateView):
+    template_name = 'selfie/selfie_add.html'
+    form_class = SelfieForm
+    success_url = '/thanks/'
+
+    def get_initial(self):
+        self.initial.update({'request': self.request})
+
+        return self.initial
+
+class ThanksView(generic.TemplateView):
+    template_name = "selfie/thanks.html"
