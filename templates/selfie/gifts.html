@@ -3,50 +3,70 @@
 {% load staticfiles %}
 
 {% block content %}
-<div class="container">
 
-    <div class="row">
-        <div class="col-md-4">
-            <div class="thumbnail">
-              <div class="caption">
-                <h3>Прыжок с моста</h3>
-              </div>
-              <img src="{% static "img/jump.jpg" %}" class="img-responsive" alt=""/>
-              <div class="caption">
-              <small>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit</small>
-              <p class="text-center gift-button"><a href="#" class="btn btn-default" role="button">Получить</a></p>
-              </div>
+ <section id="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Подарки</h2>
+                <p class="text-center wow fadeInDown">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
             </div>
-        </div>
 
-        <div class="col-md-4">
-            <div class="thumbnail">
-              <div class="caption">
-                <h3>Прыжок с моста</h3>
-              </div>
-              <img src="{% static "img/jump.jpg" %}" class="img-responsive" alt=""/>
-              <div class="caption">
-              <small>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit</small>
-              <p class="text-center gift-button"><a href="#" class="btn btn-default" role="button">Получить</a></p>
-              </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="blog-post blog-large wow fadeInLeft" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <article>
+                            <header class="entry-header">
+                                <div class="entry-thumbnail">
+                                    <img class="img-responsive" src="{% static "img/jump.jpg" %}" alt="">
+                                </div>
+                                <h2 class="entry-title"><a href="#">While now the fated Pequod had been so long afloat this</a></h2>
+                            </header>
+
+                            <div class="entry-content">
+                                <P>With a blow from the top-maul Ahab knocked off the steel head of the lance, and then handing to the mate the long iron rod remaining, bade him hold it upright, without its touching off the steel head of the lance, and then handing to the mate the long iron rod remaining. without its touching off the steel without its touching off the steel</P>
+                                <a class="btn btn-primary" href="#">Заказать</a>
+                            </div>
+                        </article>
+                    </div>
+                </div><!--/.col-sm-6-->
+                <div class="col-sm-6">
+                    <div class="blog-post blog-media wow fadeInRight" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <article class="media clearfix">
+                            <div class="entry-thumbnail pull-left">
+                                <img class="img-responsive" src="{% static "img/jump.jpg" %}" alt="">
+                            </div>
+                            <div class="media-body">
+                                <header class="entry-header">
+                                    <h2 class="entry-title"><br><br><a href="#">BeReviews was a awesome envent in dhaka</a></h2>
+                                </header>
+
+                                <div class="entry-content">
+                                    <P>With a blow from the top-maul Ahab knocked off the steel head of the lance, and then handing to the steel</P>
+                                    <a class="btn btn-primary" href="#">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="blog-post blog-media wow fadeInRight" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <article class="media clearfix">
+                            <div class="entry-thumbnail pull-left">
+                                <img class="img-responsive" src="{% static "img/jump.jpg" %}" alt="">
+                            </div>
+                            <div class="media-body">
+                                <header class="entry-header">
+                                    <h2 class="entry-title"><br><br><a href="#">Play list of old bangle  music and gajal</a></h2>
+                                </header>
+
+                                <div class="entry-content">
+                                    <P>With a blow from the top-maul Ahab knocked off the steel head of the lance, and then handing to the steel</P>
+                                    <a class="btn btn-primary" href="#">Заказать</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
             </div>
+
         </div>
-
-        <div class="col-md-4">
-            <div class="thumbnail">
-              <div class="caption">
-                <h3>Прыжок с моста</h3>
-              </div>
-              <img src="{% static "img/jump.jpg" %}" class="img-responsive" alt=""/>
-              <div class="caption">
-              <small>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit</small>
-              <p class="text-center gift-button"><a href="#" class="btn btn-default" role="button">Получить</a></p>
-              </div>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-
+    </section>
 {% endblock %}

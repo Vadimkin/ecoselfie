@@ -38,15 +38,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">EcoSelfie</a>
+          <a class="navbar-brand" href="/"><img src="{% static "img/logo.png" %}" alt="logo"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
             <li><a href="{% url 'photo_list' %}">Фото</a></li>
-            <li><a href="#about">С чего начать</a></li>
+            <li><a href="{% url 'how_start' %}">С чего начать</a></li>
             <li><a href="{% url 'gifts' %}">Подарки</a></li>
-            <li><a href="#contact">Партнеры</a></li>
-            <li><a href="#contact">Контакты</a></li>
+            <li><a href="{% url 'partners' %}">Партнеры</a></li>
+            <li><a href="{% url 'contacts' %}">Контакты</a></li>
             {% if user.is_authenticated %}
               <li><a href="{% url 'upload_pic' %}">Загрузить селфи</a></li>
             {% else %}
@@ -61,8 +61,15 @@
     {% block content %}<h1>Hello, world!</h1>{% endblock %}
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
-    <script src="{% static "js/jquery-2.1.1.min.js" %}"></script>
-
+    <script src="{% static "js/jquery.js" %}"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="{% static "js/owl.carousel.min.js" %}"></script>
+    <script src="{% static "js/mousescroll.js" %}"></script>
+    <script src="{% static "js/smoothscroll.js" %}"></script>
+    <script src="{% static "js/jquery.prettyPhoto.js" %}"></script>
+    <script src="{% static "js/jquery.isotope.min.js" %}"></script>
+    <script src="{% static "js/jquery.inview.min.js" %}"></script>
+    <script src="{% static "js/wow.min.js" %}"></script>
     <script src="{% static "js/bootstrap.min.js" %}"></script>
     <script src="{% static "js/main.js" %}"></script>
   </body>

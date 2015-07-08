@@ -1,9 +1,40 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<section id="animated-number">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Ваша статистика</h2>
+            </div>
+
+            <div class="row text-center">
+                <div class="col-sm-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="0ms">
+                        <div class="animated-number" data-digit="{{ all_count }}" data-duration="1000"></div>
+                        <strong>ЗАГРУЖЕНО СЕЛФИ</strong>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="100ms">
+                        <div class="animated-number" data-digit="{{ moderated_count }}" data-duration="1000"></div>
+                        <strong>ПРОВЕРЕНО СЕЛФИ</strong>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-xs-6">
+                    <div class="wow fadeInUp" data-wow-duration="400ms" data-wow-delay="200ms">
+                        <div class="animated-number" data-digit="{{ balls_count }}" data-duration="1000"></div>
+                        <strong>НАБРАНО БАЛОВ</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#animated-number-->
+
+
 <div class="container">
 
-    <h3>Добавление селфи:</h3>
+    <h3>Добавление нового селфи:</h3>
 
     <form  method="post" class="form-horizontal" enctype="multipart/form-data">
         {% csrf_token %}
@@ -23,7 +54,7 @@
 
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-default">Сохранить</button>
+                <button type="submit" class="btn btn-primary btn-lg">Сохранить</button>
             </div>
         </div>
     </form>
