@@ -10,7 +10,13 @@
 
     <!-- Bootstrap -->
     <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
-    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/font-awesome.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/animate.min.css" %}" rel="stylesheet">
+    <link href="{% static "css/owl.carousel.css" %}" rel="stylesheet">
+    <link href="{% static "css/owl.transitions.css" %}" rel="stylesheet">
+    <link href="{% static "css/prettyPhoto.css" %}" rel="stylesheet">
+    <link href="{% static "css/main.css" %}" rel="stylesheet">
+    <link href="{% static "css/responsive.css" %}" rel="stylesheet">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -20,9 +26,10 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body style="padding-top: 80px;">
+  <body id="home" class="homepage">
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <header id="header">
+    <nav id="main-menu" class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -35,23 +42,23 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Фото</a></li>
+            <li><a href="{% url 'photo_list' %}">Фото</a></li>
             <li><a href="#about">С чего начать</a></li>
-            <li><a href="#contact">Подарки</a></li>
+            <li><a href="{% url 'gifts' %}">Подарки</a></li>
             <li><a href="#contact">Партнеры</a></li>
             <li><a href="#contact">Контакты</a></li>
-
-            <li><a href="#contact">Регистрация</a></li>
+            {% if user.is_authenticated %}
+              <li><a href="{% url 'upload_pic' %}">Загрузить селфи</a></li>
+            {% else %}
+              <li><a href="">Регистрация</a></li>
+            {% endif %}
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
-    <div class="container">
+  </header>
 
     {% block content %}<h1>Hello, world!</h1>{% endblock %}
-
-    </div>
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
     <script src="{% static "js/jquery-2.1.1.min.js" %}"></script>
